@@ -1,0 +1,38 @@
+digraph Tree {
+node [shape=box, style="rounded", color="black", fontname=helvetica] ;
+graph [ranksep=equally, splines=polyline] ;
+edge [fontname=helvetica] ;
+0 [label="CountryCode_AU <= 0.5\ngini = 0.02\nsamples = 100.0%\nvalue = [0.99, 0.01]"] ;
+1 [label="CountryCode_JP <= 0.5\ngini = 0.019\nsamples = 99.2%\nvalue = [0.99, 0.01]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="CountryCode_HU <= 0.5\ngini = 0.019\nsamples = 97.9%\nvalue = [0.991, 0.009]"] ;
+1 -> 2 ;
+3 [label="gini = 0.019\nsamples = 97.8%\nvalue = [0.991, 0.009]"] ;
+2 -> 3 ;
+4 [label="gini = 0.139\nsamples = 0.1%\nvalue = [0.925, 0.075]"] ;
+2 -> 4 ;
+5 [label="Gender_0 <= 0.5\ngini = 0.073\nsamples = 1.3%\nvalue = [0.962, 0.038]"] ;
+1 -> 5 ;
+6 [label="gini = 0.023\nsamples = 0.9%\nvalue = [0.988, 0.012]"] ;
+5 -> 6 ;
+7 [label="gini = 0.18\nsamples = 0.4%\nvalue = [0.9, 0.1]"] ;
+5 -> 7 ;
+8 [label="Gender_0 <= 0.5\ngini = 0.108\nsamples = 0.8%\nvalue = [0.943, 0.057]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="AudClass_N2 <= 0.5\ngini = 0.047\nsamples = 0.5%\nvalue = [0.976, 0.024]"] ;
+8 -> 9 ;
+10 [label="gini = 0.033\nsamples = 0.4%\nvalue = [0.983, 0.017]"] ;
+9 -> 10 ;
+11 [label="gini = 0.094\nsamples = 0.1%\nvalue = [0.951, 0.049]"] ;
+9 -> 11 ;
+12 [label="AudClass_N2 <= 0.5\ngini = 0.214\nsamples = 0.3%\nvalue = [0.878, 0.122]"] ;
+8 -> 12 ;
+13 [label="gini = 0.157\nsamples = 0.2%\nvalue = [0.914, 0.086]"] ;
+12 -> 13 ;
+14 [label="gini = 0.331\nsamples = 0.1%\nvalue = [0.79, 0.21]"] ;
+12 -> 14 ;
+{rank=same ; 0} ;
+{rank=same ; 1; 8} ;
+{rank=same ; 2; 5; 9; 12} ;
+{rank=same ; 3; 4; 6; 7; 10; 11; 13; 14} ;
+}
